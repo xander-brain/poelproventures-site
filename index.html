@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Poelpro Ventures</title>
-<meta name="description" content="Poelpro Ventures is the parent company of The Modern Adjuster, Smokin Bonsai and the ventures still to come.">
+<meta name="description" content="Poelpro Ventures helps people in different industries spend less time on busywork, with practical AI tools and training built by someone who has done the work.">
 <meta property="og:title" content="Poelpro Ventures">
-<meta property="og:description" content="The parent company of The Modern Adjuster, Smokin Bonsai and the ventures still to come.">
+<meta property="og:description" content="Practical AI tools and training for the industries we know best: insurance adjusters, public adjusters, contractors and more.">
 <meta property="og:image" content="https://poelproventures.com/og-image.png">
 <meta property="og:url" content="https://poelproventures.com/">
 <link rel="icon" type="image/png" sizes="32x32" href="icon-32.png">
@@ -15,44 +15,76 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{--navy:#14243f;--teal:#1e9a97;--gray:#5b6b80;--line:#e3e8ee;--bg:#f7f9fb;}
+  :root{--navy:#14243f;--navy2:#0b1628;--teal:#1e9a97;--teal2:#27c2bd;--gold:#b89a5e;--gray:#5b6b80;--line:#e6ebf1;--bg:#f5f7fa;}
   *{box-sizing:border-box;margin:0;padding:0}
-  body{font-family:Montserrat,Arial,sans-serif;color:var(--navy);background:var(--bg);line-height:1.6}
+  html{scroll-behavior:smooth}
+  body{font-family:Montserrat,Arial,sans-serif;color:var(--navy);background:var(--bg);line-height:1.65;-webkit-font-smoothing:antialiased}
   a{color:inherit}
-  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-  header{background:#fff;border-bottom:1px solid var(--line)}
-  header .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
-  header img{height:52px;width:auto;display:block}
-  header nav a{text-decoration:none;font-weight:600;font-size:15px;margin-left:22px;color:var(--gray)}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+  header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.82);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid rgba(20,36,63,.08)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+  header img{height:44px;width:auto;display:block}
+  header nav{display:flex;align-items:center;gap:26px}
+  header nav a{text-decoration:none;font-weight:600;font-size:14px;color:var(--gray);transition:color .2s}
   header nav a:hover{color:var(--teal)}
-  .hero{background:#fff;padding:72px 0 64px;text-align:center}
-  .hero h1{font-size:clamp(28px,4.5vw,44px);font-weight:700;line-height:1.2;max-width:760px;margin:0 auto 18px}
-  .hero h1 span{color:var(--teal)}
-  .hero p{font-size:18px;color:var(--gray);max-width:640px;margin:0 auto}
-  section{padding:64px 0}
-  h2{font-size:28px;font-weight:700;margin-bottom:8px}
-  .sub{color:var(--gray);margin-bottom:32px}
+  header nav a.cta{color:#fff;background:var(--navy);padding:9px 18px;border-radius:999px}
+  header nav a.cta:hover{background:var(--teal);color:#fff}
+  .hero{position:relative;overflow:hidden;color:#fff;padding:110px 0 120px;background:radial-gradient(1200px 500px at 85% -10%,rgba(39,194,189,.35),transparent 60%),radial-gradient(900px 500px at -10% 110%,rgba(184,154,94,.22),transparent 60%),linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%)}
+  .hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%)}
+  .hero .wrap{position:relative;max-width:880px;text-align:center}
+  .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--teal2);border:1px solid rgba(39,194,189,.4);background:rgba(39,194,189,.08);padding:7px 16px;border-radius:999px;margin-bottom:26px}
+  .hero h1{font-size:clamp(34px,5.6vw,62px);font-weight:700;line-height:1.08;letter-spacing:-1.5px;margin-bottom:24px}
+  .hero h1 span{background:linear-gradient(90deg,var(--teal2),#8fe3df);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{font-size:clamp(16px,2vw,19px);color:rgba(255,255,255,.75);max-width:680px;margin:0 auto 36px}
+  .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:15px;padding:14px 26px;border-radius:999px;transition:transform .2s,background .2s,box-shadow .2s}
+  .btn.primary{background:var(--teal);color:#fff;box-shadow:0 8px 24px rgba(30,154,151,.35)}
+  .btn.primary:hover{background:var(--teal2);transform:translateY(-2px)}
+  .btn.ghost{color:#fff;border:1px solid rgba(255,255,255,.3)}
+  .btn.ghost:hover{background:rgba(255,255,255,.08)}
+  section{padding:96px 0}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--teal);margin-bottom:10px}
+  h2{font-size:clamp(28px,3.6vw,40px);font-weight:700;letter-spacing:-.8px;line-height:1.15;margin-bottom:12px}
+  .sub{color:var(--gray);font-size:17px;max-width:620px;margin-bottom:44px}
   .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s}
+  .card{position:relative;background:#fff;border:1px solid var(--line);border-radius:22px;padding:34px;display:flex;flex-direction:column;overflow:hidden;transition:box-shadow .3s,transform .3s,border-color .3s}
+  .card:before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--accent,var(--teal))}
   a.card{text-decoration:none}
-  a.card:hover{box-shadow:0 10px 30px rgba(20,36,63,.10);transform:translateY(-3px)}
-  .logo{height:120px;display:flex;align-items:center;margin-bottom:18px}
-  .logo img{max-height:120px;max-width:140px;width:auto}
-  .mono{width:96px;height:96px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:30px;color:#fff;letter-spacing:1px}
-  .card h3{font-size:22px;font-weight:700;margin-bottom:6px}
-  .card p{color:var(--gray);flex:1;margin-bottom:20px}
-  .go{font-weight:600;color:var(--teal)}
-  .soon{display:inline-block;font-size:13px;font-weight:600;color:var(--gray);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:4px 12px;align-self:flex-start}
-  .about{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .about p{max-width:720px;font-size:17px;color:var(--gray)}
-  .contact a{color:var(--teal);font-weight:600;text-decoration:none;font-size:18px}
-  footer{padding:28px 0;color:var(--gray);font-size:14px;text-align:center}
-  @media (max-width:720px){
-    .grid{grid-template-columns:1fr}
-    header img{height:40px}
-    header nav a{margin-left:14px;font-size:14px}
-    .hero{padding:48px 0 44px}
-    section{padding:48px 0}
+  a.card:hover{box-shadow:0 24px 50px -12px rgba(20,36,63,.22);transform:translateY(-6px);border-color:transparent}
+  .logo{height:110px;display:flex;align-items:center;margin-bottom:22px}
+  .logo img{max-height:110px;max-width:130px;width:auto}
+  .mono{width:88px;height:88px;border-radius:22px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:28px;color:#fff;letter-spacing:1px;box-shadow:0 10px 24px -8px rgba(20,36,63,.4)}
+  .card h3{font-size:23px;font-weight:700;letter-spacing:-.3px;margin-bottom:8px}
+  .card p strong{color:var(--navy)}
+  .card p{color:var(--gray);flex:1;margin-bottom:24px}
+  .go{display:inline-flex;align-items:center;gap:10px;font-weight:600;color:var(--navy)}
+  .go i{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--bg);font-style:normal;transition:background .3s,color .3s,transform .3s}
+  a.card:hover .go i{background:var(--accent,var(--teal));color:#fff;transform:translateX(4px)}
+  .soon{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--gray);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:6px 14px;align-self:flex-start}
+  .soon:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+  .about{background:#fff}
+  .about .wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:64px;align-items:center}
+  .quote{font-size:clamp(20px,2.4vw,26px);font-weight:500;line-height:1.5;color:var(--navy);border-left:4px solid var(--teal);padding-left:28px}
+  .sig{margin-top:18px;font-weight:700;color:var(--navy);font-size:15px}
+  .sig span{display:block;font-weight:500;color:var(--gray)}
+  .contact{padding:0 0 96px}
+  .contact .box{border-radius:28px;padding:64px 40px;text-align:center;color:#fff;background:radial-gradient(700px 300px at 100% 0%,rgba(39,194,189,.35),transparent 60%),linear-gradient(135deg,var(--navy),var(--navy2))}
+  .contact h2{color:#fff}
+  .contact .sub{color:rgba(255,255,255,.75);margin:0 auto 30px}
+  footer{padding:32px 0;color:var(--gray);font-size:14px;border-top:1px solid var(--line)}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+  footer img{height:28px}
+  @media (max-width:820px){
+    .grid,.about .wrap{grid-template-columns:1fr}
+    .about .wrap{gap:28px}
+    header nav a:not(.cta){display:none}
+    header img{height:36px}
+    .hero{padding:80px 0 88px}
+    section{padding:72px 0}
+    .card{padding:28px}
+    .contact .box{padding:48px 24px}
+    footer .wrap{justify-content:center;text-align:center}
   }
 </style>
 </head>
@@ -60,44 +92,47 @@
 <header>
   <div class="wrap">
     <a href="/"><img src="img/logo.svg" alt="Poelpro Ventures"></a>
-    <nav><a href="#ventures">Ventures</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <nav><a href="#ventures">Our businesses</a><a href="#about">Why us</a><a class="cta" href="#contact">Get in touch</a></nav>
   </div>
 </header>
 
 <div class="hero">
   <div class="wrap">
-    <h1>One home for every business <span>Dave Poelvoorde</span> is building.</h1>
-    <p>Poelpro Ventures is the parent company behind each brand below. Pick one to visit its site.</p>
+    <span class="eyebrow">Practical AI for real industries</span>
+    <h1>Helping people in every industry we serve <span>work smarter, not harder.</span></h1>
+    <p>Every industry has its own paperwork, its own systems and its own headaches. Poelpro Ventures builds practical tools and training that cut the busywork, so you can focus on the people you serve.</p>
+    <div class="btns"><a class="btn primary" href="#ventures">Find the business built for you &darr;</a><a class="btn ghost" href="#contact">Talk to Dave</a></div>
   </div>
 </div>
 
 <section id="ventures">
   <div class="wrap">
-    <h2>Our ventures</h2>
-    <p class="sub">Live now, and what's coming next.</p>
+    <div class="kicker">Our businesses</div>
+    <h2>Find the right fit for you</h2>
+    <p class="sub">Each business serves a different group. Here's who we help today, and who's next.</p>
     <div class="grid">
-      <a class="card" href="https://themodernadjuster.net" target="_blank" rel="noopener">
+      <a class="card" style="--accent:#14243f" href="https://themodernadjuster.net" target="_blank" rel="noopener">
         <div class="logo"><img src="img/tma.png" alt="The Modern Adjuster logo"></div>
         <h3>The Modern Adjuster</h3>
-        <p>AI training and setup for insurance adjusters. Adjuster-driven, intuitive AI tools that cut the busywork so you can close more files.</p>
-        <span class="go">Visit themodernadjuster.net &rarr;</span>
+        <p><strong>For insurance adjusters.</strong> Hands-on AI training and setup that takes the busywork off your desk, so you can close more files with less stress.</p>
+        <span class="go">themodernadjuster.net <i>&rarr;</i></span>
       </a>
-      <a class="card" href="https://smokinbonsai.com" target="_blank" rel="noopener">
+      <a class="card" style="--accent:#7a5a2e" href="https://smokinbonsai.com" target="_blank" rel="noopener">
         <div class="logo"><img src="img/smokinbonsai.png" alt="Smokin Bonsai logo"></div>
         <h3>Smokin Bonsai</h3>
-        <p>Bonsai from a Florida grower: tree journals, care tips for our climate, and trees for sale.</p>
-        <span class="go">Visit smokinbonsai.com &rarr;</span>
+        <p><strong>For bonsai lovers.</strong> Care tips made for Florida's climate, tree journals you can learn from, and trees ready for a new home.</p>
+        <span class="go">smokinbonsai.com <i>&rarr;</i></span>
       </a>
-      <div class="card">
-        <div class="logo"><div class="mono" style="background:var(--navy)">MA</div></div>
+      <div class="card" style="--accent:#b89a5e">
+        <div class="logo"><div class="mono" style="background:linear-gradient(135deg,#14243f,#2b3f63)">MA</div></div>
         <h3>The Modern Advocate</h3>
-        <p>AI tools and training built for public adjusters and policyholder advocates.</p>
+        <p><strong>For public adjusters and policyholder advocates.</strong> AI tools and training that help you prepare claims faster for the people you represent.</p>
         <span class="soon">Coming soon</span>
       </div>
-      <div class="card">
-        <div class="logo"><div class="mono" style="background:var(--teal)">GC</div></div>
+      <div class="card" style="--accent:#1e9a97">
+        <div class="logo"><div class="mono" style="background:linear-gradient(135deg,#1e9a97,#27c2bd)">GC</div></div>
         <h3>AI for Contractors</h3>
-        <p>AI setup for contractors: pay subs right, bill owners right, and spend less time on paperwork.</p>
+        <p><strong>For contractors.</strong> Simple AI setup to pay subs right, bill owners right, and get your evenings back from paperwork.</p>
         <span class="soon">Coming soon</span>
       </div>
     </div>
@@ -106,19 +141,29 @@
 
 <section id="about" class="about">
   <div class="wrap">
-    <h2>About</h2>
-    <p>Poelpro Ventures was started by Dave Poelvoorde, a licensed insurance adjuster since 2019 with years in sales and finance before that. Each venture puts that experience to work in a different way, from helping adjusters use AI to growing trees one branch at a time.</p>
+    <div>
+      <div class="kicker">Why Poelpro Ventures</div>
+      <h2>Built by someone who has done the work.</h2>
+    </div>
+    <div>
+      <p class="quote">I've spent years in sales, finance and insurance claims, and I've seen how much time good people lose to paperwork and clunky systems. Poelpro Ventures is how I help, one industry at a time.</p>
+      <p class="sig">Dave Poelvoorde<span>Founder, Poelpro Ventures</span></p>
+    </div>
   </div>
 </section>
 
 <section id="contact" class="contact">
   <div class="wrap">
-    <h2>Contact</h2>
-    <p class="sub">Questions about any of our businesses? Send an email.</p>
-    <a href="mailto:dave@poelproventures.com">dave@poelproventures.com</a>
+    <div class="box">
+      <h2>Not sure which one fits?</h2>
+      <p class="sub">Tell me what you do and what's slowing you down. I'll point you in the right direction.</p>
+      <a class="btn primary" href="mailto:dave@poelproventures.com">Email dave@poelproventures.com</a>
+    </div>
   </div>
 </section>
 
-<footer>&copy; 2026 Poelpro LLC. All rights reserved.</footer>
+<footer>
+  <div class="wrap"><img src="img/logo.svg" alt="Poelpro Ventures"><span>&copy; 2026 Poelpro LLC. All rights reserved.</span></div>
+</footer>
 </body>
 </html>
